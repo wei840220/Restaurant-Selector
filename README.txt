@@ -1,3 +1,5 @@
-»¡©ú¡G¬°¤F¸Ñ¨M¿ï¾Ü§xÃø¡A¦Ó¼¶¼gªºÀ\ÆU©âÅÒ APP¡CÂÇ¥Ñ Ajax ¥hÅª¨ú¦s©ñ¦b JSON data file ¤¤ªº¹w³]À\ÆU¡A¯à°÷¶i¦æÀ\ÆU¶µ¥Øªº·s¼W¡B§R°£¥H¤Î©âÅÒªº¥\¯à¡C
+èªªæ˜Žï¼šç‚ºäº†è§£æ±ºé¸æ“‡å›°é›£ï¼Œè€Œæ’°å¯«çš„é¤å»³æŠ½ç±¤ APPã€‚è—‰ç”± Ajax åŽ»è®€å–å­˜æ”¾åœ¨ JSON data file ä¸­çš„é è¨­é¤å»³ï¼Œèƒ½å¤ é€²è¡Œé¤å»³é …ç›®çš„æ–°å¢žã€åˆªé™¤ä»¥åŠæŠ½ç±¤çš„åŠŸèƒ½ã€‚
 
-§Þ³N¡GHTML(Pug)¡BCSS(SASS)¡BjQuery¡BAjax¡BJSON
+æŠ€è¡“ï¼šHTML(Pug)ã€CSS(SASS)ã€jQueryã€Ajaxã€JSON
+
+DEMOï¼šhttp://restaurant-selector.weisite.com.tw/
