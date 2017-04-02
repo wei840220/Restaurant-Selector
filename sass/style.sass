@@ -1,0 +1,152 @@
+$color_grey: #ccc
+$color_black: #333
+$color_purple: #808cc9
+$color_dark_purple: #636FA4
+$color_white: #F0EDF0
+$color_pink: #E6DBD4
+
+*
+  font-family: 'Roboto Condensed', 微軟正黑體 ,sans-serif
+  // border: solid 1px
+
+body, html
+  padding: 0
+  margin: 0
+  background: linear-gradient(to left, #E8CBC0 , #636FA4)
+  
+.app
+  max-width: 600px
+  min-width: 260px
+  padding: 25px
+  margin-left: 50%
+  margin-top: 80px
+  transform: translateX(-50%)
+  border-radius: 5px
+  background-color: $color_white
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+
+  h1
+    text-align: center
+    font-size: 28px
+    font-weight: 500
+    line-height: 140%
+    color: $color_purple
+    letter-spacing: 1px
+
+  .add_block
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    
+    input
+      width: calc(100% - 65px)
+      height: 30px
+      padding: 2px 5px
+      margin: 5px
+      border: none
+      border-bottom: 1px solid $color_grey
+      
+    .add_btn
+      font-family: sans-serif
+      width: 40px
+      height: 40px
+      text-align: center
+      font-size: 20px
+      line-height: 40px
+      border-radius: 100%
+      background-color: $color_purple
+      color: $color_white
+      cursor: pointer
+      transition-duration: 0.5s
+      user-select: none
+      
+    .add_btn:hover
+      background-color: $color_dark_purple
+      
+  .list
+    margin: 20px 0px
+    ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+      display: flex
+      flex-wrap: wrap
+      justify-content: center 
+      
+      li
+        padding: 5px
+        margin: 3px 5px
+        background-color: $color_pink
+        border-radius: 5px
+        display: flex
+        align-items: center
+        box-shadow: inset 0 -1px 0 rgba( 255, 255, 250, 0.6), inset 0 -2px 0 rgba( 0, 0, 0, 0.1)
+        name
+          letter-spacing: 0.2px
+          color: $color_black
+        button.del
+          margin-left: 3px
+          border: none
+          background-color: $color_pink
+          line-height: 20px
+          cursor: pointer
+    
+  .pick_btn
+    padding: 10px
+    width: 160px
+    margin: 10px auto
+    background-color: $color_purple
+    color: $color_white
+    border-radius: 10px
+    letter-spacing: 0.5px
+    text-align: center
+    cursor: pointer
+    transition-duration: 0.5s
+    user-select: none
+    
+  .pick_btn:hover
+    background-color: $color_dark_purple
+    
+  .fill_stock
+    position: relative
+    margin: 0
+    padding: 0
+    text-align: center
+    height: 0px
+    letter-spacing: 2px
+    color: $color_black
+    overflow: hidden
+    transition-duration: 0.5s
+    border-top: solid 1px $color_white
+    
+    i
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translateX(-50%) translateY(-40%)
+      font-size: 50px
+      color: $color_pink
+    
+    h4
+      margin-top: 0px
+      position: relative
+      font-size: 16px
+      font-weight: 400
+      letter-spacing: 1px
+      color: $color_black
+      
+  .fill_stock_open
+    border-top: solid 1px $color_grey
+    padding: 10px
+    height: 50px
+    
+.footer
+  position: fixed
+  bottom: 0
+  text-align: center
+  height: 20px
+  width: 100%
+  background-color: $color_dark_purple
+  color: $color_white
+  letter-spacing: 1px
+  font-weight: 200
