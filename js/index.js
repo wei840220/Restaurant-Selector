@@ -5,6 +5,7 @@ var list_html = "<li id={id}> <name>{name}</name><button class='del' id={id}>×<
 
 $.ajax({
   url: dataurl,
+  dataType: "json",
   error: function(){
     console.log("error");
   },
