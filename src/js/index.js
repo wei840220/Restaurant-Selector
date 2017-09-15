@@ -2,10 +2,10 @@
   'use strict';
 
   // global
-  var rlist = [];
-  var first_load = true;
+  var dataList = [];
+  var isFirstLoad = true;
   var time = undefined;
-  var list_html = "<li id={id}> <name>{name}</name><button class='del' id={id}>×</button></li>";
+  var $htmlString = "<li id={id}> <name>{name}</name><button class='del' id={id}>×</button></li>";
 
   var _init = function(){
     _initLoad();
@@ -23,7 +23,7 @@
       },
       success: function(res){
         console.log("success");
-        rlist = res;
+        dataList = res;
         _update();
       }
     });
@@ -31,19 +31,19 @@
 
   var _update = function (){
     $("ul").html("");
-    for (var i = 0; i < rlist.length; i++){
-      var current_list_html = 
-          list_html.replace(/{id}/g, i) 
-                   .replace("{name}", rlist[i].name);
-      if (!first_load)
-        $("ul").append(current_list_html);  
+    for (var i = 0; i < dataList.length; i++){
+      var current_$htmlString = 
+          $htmlString.replace(/{id}/g, i) 
+                   .replace("{name}", dataList[i].name);
+      if (!isFirstLoad)
+        $("ul").append(current_$htmlString);  
       else
-        $(current_list_html).hide().appendTo("ul").delay( i*100 ).fadeIn(1000);
+        $(current_$htmlString).hide().appendTo("ul").delay( i*100 ).fadeIn(1000);
     }
-    first_load = false;
+    isFirstLoad = false;
     
     $("button.del").click( function(){
-      rlist.splice(this.id,1);
+      dataList.splice(this.id,1);
       _update();
     });
   }
@@ -54,7 +54,7 @@
         alert("Invalid input. Please enter again.");
       }
       else {
-        rlist.push({ name:$("input").val() });
+        dataList.push({ name:$("input").val() });
         $("input").val("");
         _update();
       }
@@ -67,7 +67,7 @@
           open = true;
         }
        
-        if (rlist.length == 0)  {
+        if (dataList.length == 0)  {
           $("h2").html("");
           $("h2").append("<i class='fa fa-cutlery' aria-hidden='true'></i><h4>Oops! Haven't add any restaurants?</h4>");
         }
@@ -79,8 +79,8 @@
   
   var pick = function(){
     $("h2").html("");
-    var num = Math.floor( Math.random()*(rlist.length) );
-    $("h2").append(rlist[num].name);
+    var num = Math.floor( Math.random()*(dataList.length) );
+    $("h2").append(dataList[num].name);
   };
   
   var countdown = function(){
