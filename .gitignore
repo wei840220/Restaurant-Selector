@@ -47,7 +47,10 @@ Temporary Items
 .apdisk
 
 # Gulp
-
 .node_modules
 package.json
 gulpfile.js
+
+# source files
+.src
+README.txt
