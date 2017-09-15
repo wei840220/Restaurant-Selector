@@ -34,7 +34,8 @@ body, html {
       padding: 2px 5px;
       margin: 5px;
       border: none;
-      border-bottom: 1px solid #ccc; }
+      border-bottom: 1px solid #ccc;
+      font-size: 16px; }
     .app .add_block .add_btn {
       font-family: sans-serif;
       width: 40px;
