@@ -13,24 +13,31 @@
   };
 
   var _initLoad = function(){
-    var dataurl = "data.json";
-
-    $.ajax({
-      url: dataurl,
-      dataType: "json",
-      error: function(){
-        console.log("error");
-      },
-      success: function(res){
-        console.log("success");
-        dataList = res;
-        _update();
-      }
-    });
-  }
+    var dataStr = localStorage.getItem("dataList");
+    if (!dataStr){
+      var dataurl = "data.json";
+      $.ajax({
+        url: dataurl,
+        dataType: "json",
+        error: function(){
+          console.log("error");
+        },
+        success: function(res){
+          console.log("success");
+          dataList = res;
+          _update();
+        }
+      });
+    }
+    else {
+      dataList = JSON.parse(dataStr);
+      _update();
+    }
+  };
 
   var _update = function (){
     $("ul").html("");
+    localStorage.setItem("dataList", JSON.stringify(dataList));
     for (var i = 0; i < dataList.length; i++){
       var current_$htmlString = 
           $htmlString.replace(/{id}/g, i) 
@@ -46,7 +53,7 @@
       dataList.splice(this.id,1);
       _update();
     });
-  }
+  };
 
   var _initEventListeners = function(){
     $(".add_btn").click( function(){
@@ -94,10 +101,10 @@
         clearInterval(intervalID);
       }
     }, 100);
-  }  
+  };  
 
   $(document).ready(function(){
     _init();
-});
+  });
 
 })(jQuery);
