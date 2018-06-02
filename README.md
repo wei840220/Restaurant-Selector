@@ -17,7 +17,7 @@ With a click of the button, this app will pick a restaurant at random! Enjoy!
 
 ## Demo
 
-http://restaurant-selector.weisite.com.tw/
+http://f2e-veru.com/Restaurant-Selector/
 
 ---
 
@@ -38,4 +38,4 @@ http://restaurant-selector.weisite.com.tw/
 
 ## 展示
 
-http://restaurant-selector.weisite.com.tw/
+http://f2e-veru.com/Restaurant-Selector/
