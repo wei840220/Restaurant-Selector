@@ -17,7 +17,7 @@ With a click of the button, this app will pick a restaurant at random! Enjoy!
 
 ## Demo
 
-http://f2e-veru.com/Restaurant-Selector/
+http://wei840220.github.io/Restaurant-Selector/
 
 ---
 
@@ -38,4 +38,4 @@ http://f2e-veru.com/Restaurant-Selector/
 
 ## 展示
 
-http://f2e-veru.com/Restaurant-Selector/
+http://wei840220.github.io/Restaurant-Selector/
